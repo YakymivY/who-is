@@ -1,0 +1,118 @@
+.person-container {
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person__title {
+    font-weight: 500;
+    font-size: 2.5em;
+    color: #834920;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    text-align: center;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider img {
+    width: 100%;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+
+/* CATEGORIES */
+
+.categories-container {
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.category__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.category__title {
+    max-width: 50%;
+    font-size: 2em;
+    font-weight: 500;
+    color: #834920;
+    text-decoration: underline;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.category__arrow {
+    width: 30px;
+    transform: translateX(-15px);
+    transition: transform 250ms ease;
+}
+
+.category__arrow:hover {
+    transform: translateX(0);
+}
+
+.category__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category__personality {
+    width: 30%;
+    aspect-ratio: 4 / 3;
+    border-radius: 5px;
+    background-image: url('../../../assets/jpg/person.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.personality__cover {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .45);
+    border: 3px solid transparent;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: 250ms ease;
+}
+
+.personality__name {
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.personality__cover:hover {
+    opacity: 1;
+    border: 3px solid #3FAB64;
+}
