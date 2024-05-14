@@ -1,0 +1,123 @@
+.portrait {
+    width: auto;
+    aspect-ratio: 64 / 27;
+    margin: 25px 50px;
+    background-image: url('../../../assets/jpg/person.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.name {
+    margin: 10px 75px;
+    font-size: 3em;
+    font-weight: 500;
+    color: #834920;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.about {
+    width: 100%;
+    padding: 0 75px;
+    margin: 50px 0;
+}
+
+.personality__heading {
+    color: #834920;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.about__info {
+    color: #834920;
+    font-size: 18px;
+}
+
+.connections {
+    width: auto;
+    margin: 0 75px;
+    padding: 25px;
+    background-color: #EDD191;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.connections__content {
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.connections__image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-image: url('../../../assets/jpg/person.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.events {
+    width: 100%;
+    padding: 0 75px;
+    margin: 50px 0;
+}
+
+.events__item {
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #EDD191;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.event__heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.event__title {
+    color: #834920;
+    font-size: 1.7em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.event__heading-right {
+    display: flex;
+    align-items: center;
+}
+
+.event__badge {
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+}
+
+.event__link {
+    height: 40px;
+    margin-left: 15px;
+}
+
+.event__body {
+    margin-top: 25px;
+}
+
+.event__info {
+    color: #834920;
+    font-size: 18px;
+}
