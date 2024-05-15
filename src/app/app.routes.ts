@@ -5,6 +5,6 @@ import { PersonalityComponent } from './modules/personality/personality.componen
 
 export const routes: Routes = [
     { path: '', component: MainComponent },
-    { path: 'category:industry', component: CategoryComponent },
-    { path: 'personality', component: PersonalityComponent }
+    { path: 'category/:industry', component: CategoryComponent },
+    { path: 'personality/:id', component: PersonalityComponent }
 ];

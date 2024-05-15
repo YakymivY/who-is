@@ -1,6 +1,6 @@
 <section class="person-container">
     <h1 class="person__title">PERSON OF THE DAY</h1>
-    <div class="slider-wrapper">
+    <!-- <div class="slider-wrapper">
         <div class="slider-nav">
             <a href="#slide-1">Business</a>
             <a href="#slide-2">Politics</a>
@@ -11,56 +11,93 @@
             <img src="../../../assets/jpg/person.jpg" alt="" id="slide-2">
             <img src="../../../assets/jpg/person.jpg" alt="" id="slide-3">
         </div>
-    </div>
+    </div> -->
+    <swiper-container loop="true" navigation="true" class="slider-wrapper"
+        style="--swiper-theme-color: #834920; --swiper-navigation-top-offset: 320px;">
+        <swiper-slide class="slide">
+            <img src="../../../assets/jpg/potd_politics.jpeg" alt="" id="slide-1">
+            <div class="slide__badge slide__badge-politics">Politics</div>
+            <p class="slide__text">15 травня 2002 року Віктор Ющенко був обраний першим головою новоствореної фракції
+                "Наша Україна"</p>
+            <a href="https://static.rada.gov.ua/zakon/skl4/1session/STENOGR/15050201_04.htm" target="_blank" class="slide__button">Learn more</a>
+        </swiper-slide>
+        <swiper-slide class="slide">
+            <img src="../../../assets/jpg/potd_business.jpeg" alt="" id="slide-2">
+            <div class="slide__badge slide__badge-business">Business</div>
+            <p class="slide__text">Володимир Поперешнюк анонсував відкриття першого закордонного відділення компанії
+                Nova Post у Великій Британії</p>
+            <a href="https://novaposhta.ua/delivery_to_great_britain/" target="_blank" class="slide__button">Learn
+                more</a>
+        </swiper-slide>
+        <swiper-slide class="slide">
+            <img src="../../../assets/jpg/potd_media.jpeg" alt="" id="slide-3">
+            <div class="slide__badge slide__badge-media">Media</div>
+            <p class="slide__text">Валентин Краснопьоров. 3-х годинне інтерв'ю для каналу УТ-2 про діяльність спільноти
+                "Останній капіталіст" та економіку України</p>
+            <a href="https://youtu.be/oJmHYLfCbo8?si=4U6nt1td3xFSwz56" target="_blank" class="slide__button">Learn more</a>
+        </swiper-slide>
+    </swiper-container>
 </section>
 
 <section class="categories-container">
     <div class="category">
         <div class="category__heading">
             <h1 class="category__title">POLITICS</h1>
-            <a href=""><img src="../../../assets/png/next.png" alt="" class="category__arrow"></a>
+            <a href="/category/politics"><img src="../../../assets/png/next.png" alt="" class="category__arrow"></a>
         </div>
         <div class="category__body">
+            @for (politics_item of politics; track politics_item) {
             <div class="category__personality">
-                <div class="personality__cover">
-                    <h2 class="personality__name">Petro</h2>
-                    <h2 class="personality__name">Mostavchuk</h2>
-                </div>
+                <a [href]="'/personality/' + politics_item.id">
+                    <img class="personality__photo" [src]="'https://who-is-be.onrender.com/images/' + politics_item.photo"
+                    alt="">
+                    <div class="personality__cover">
+                        <h2 class="personality__name">{{ politics_item.firstName }}</h2>
+                        <h2 class="personality__name">{{ politics_item.lastName }}</h2>
+                    </div>
+                </a>
             </div>
-            <div class="category__personality"></div>
-            <div class="category__personality"></div>
+            }
         </div>
     </div>
     <div class="category">
         <div class="category__heading">
             <h1 class="category__title">BUSINESS</h1>
-            <a href=""><img src="../../../assets/png/next.png" alt="" class="category__arrow"></a>
+            <a href="/category/business"><img src="../../../assets/png/next.png" alt="" class="category__arrow"></a>
         </div>
         <div class="category__body">
+            @for (business_item of business; track business_item) {
             <div class="category__personality">
-                <div class="personality__cover">
-                    <h2 class="personality__name">Petro</h2>
-                    <h2 class="personality__name">Mostavchuk</h2>
-                </div>
+                <a [href]="'/personality/' + business_item.id">
+                    <img class="personality__photo" [src]="'https://who-is-be.onrender.com/images/' + business_item.photo"
+                        alt="">
+                    <div class="personality__cover">
+                        <h2 class="personality__name">{{ business_item.firstName }}</h2>
+                        <h2 class="personality__name">{{ business_item.lastName }}</h2>
+                    </div>
+                </a>
             </div>
-            <div class="category__personality"></div>
-            <div class="category__personality"></div>
+            }
         </div>
     </div>
     <div class="category">
         <div class="category__heading">
             <h1 class="category__title">MEDIA</h1>
-            <a href=""><img src="../../../assets/png/next.png" alt="" class="category__arrow"></a>
+            <a href="/category/media"><img src="../../../assets/png/next.png" alt="" class="category__arrow"></a>
         </div>
         <div class="category__body">
+            @for (media_item of media; track media_item) {
             <div class="category__personality">
-                <div class="personality__cover">
-                    <h2 class="personality__name">Petro</h2>
-                    <h2 class="personality__name">Mostavchuk</h2>
-                </div>
+                <a [href]="'/personality/' + media_item.id">
+                    <img class="personality__photo" [src]="'https://who-is-be.onrender.com/images/' + media_item.photo"
+                        alt="">
+                    <div class="personality__cover">
+                        <h2 class="personality__name">{{ media_item.firstName }}</h2>
+                        <h2 class="personality__name">{{ media_item.lastName }}</h2>
+                    </div>
+                </a>
             </div>
-            <div class="category__personality"></div>
-            <div class="category__personality"></div>
+            }
         </div>
     </div>
 </section>

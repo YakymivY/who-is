@@ -18,7 +18,15 @@
     max-width: 70rem;
     margin: 0 auto;
 }
+.slider-wrapper path {
+    margin-top: 2000px;
+}
 
+.swiper-button-prev {
+    margin-top: 20px;
+}
+
+/*
 .slider {
     display: flex;
     aspect-ratio: 16 / 9;
@@ -32,6 +40,72 @@
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
+} */
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slide img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slide__badge {
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    align-self: flex-start;
+}
+
+.slide__badge-politics {
+    background-color: cadetblue;
+}
+
+.slide__badge-media {
+    background-color: coral;
+}
+
+.slide__badge-business {
+    background-color: lightpink;
+}
+
+.slide__badge-work {
+    background-color:forestgreen;
+    color: white;
+}
+
+.slide__text {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #834920;
+}
+
+.slide__button {
+    border: 0;
+    color: white;
+    background-color: #3FAB64;
+    padding: 5px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    margin-top: 10px;
+    transition: 300ms;
+}
+
+.slide__button:hover {
+    background-color: #30834d;
+    box-shadow: none;
 }
 
 
@@ -86,16 +160,26 @@
     width: 30%;
     aspect-ratio: 4 / 3;
     border-radius: 5px;
-    background-image: url('../../../assets/jpg/person.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+}
+
+.personality__photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .personality__cover {
     width: 100%;
     height: 100%;
     padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, .45);
     border: 3px solid transparent;
     border-radius: 5px;
@@ -104,6 +188,8 @@
     justify-content: flex-end;
     opacity: 0;
     transition: 250ms ease;
+    z-index: 1;
+    margin: 0;
 }
 
 .personality__name {

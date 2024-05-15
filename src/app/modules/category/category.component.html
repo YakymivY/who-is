@@ -1,4 +1,4 @@
-<h1 class="heading">POLITICS</h1>
+<h1 class="heading">{{ displayIndustry }}</h1>
 <div class="wrapper">
     <aside class="filters">
         <h2 class="filters__title">Filters</h2>
@@ -14,12 +14,14 @@
         </form>
     </aside>
     <article class="content">
-        <div class="card">
-            <div class="card__iamge"></div>
-            <div class="card__content">
-                <h2 class="card__title">Я ЖИВИИИИИИЙ</h2>
-                <p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas fugit velit cupiditate illum illo, nihil tempora cum quam sit eaque, fuga asperiores pariatur earum eius voluptatem commodi corrupti, beatae ipsam!</p>
+        @for (person of people; track person) {
+            <div class="card">
+                <img class="card__image" [src]="'https://who-is-be.onrender.com/images/' + person.photo" alt="">
+                <div class="card__content">
+                    <a [href]="'/personality/' + person.id"><h2 class="card__title">{{ person.lastName }} {{ person.firstName }} {{ person.patronymic }}</h2></a>
+                    <p class="card__text">{{ person.description }}</p>
+                </div>
             </div>
-        </div>
+        }
     </article>
 </div>

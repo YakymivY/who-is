@@ -78,7 +78,6 @@ input[type="checkbox"]:checked::before {
 
 .card {
     width: 100%;
-    height: 100%;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
@@ -86,15 +85,14 @@ input[type="checkbox"]:checked::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 
-.card__iamge {
+.card__image {
     width: 35%;
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 4 / 3;
-    background-image: url('../../../assets/jpg/person.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     border-radius: 5px;
 }
 
@@ -108,6 +106,12 @@ input[type="checkbox"]:checked::before {
     font-weight: 500;
     text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
     color: #834920;
+    cursor: pointer;
+    transition: text-shadow 300ms;
+}
+
+.card__title:hover {
+    text-shadow: none;
 }
 
 .card__text {

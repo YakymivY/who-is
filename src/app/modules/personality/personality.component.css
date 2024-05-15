@@ -1,11 +1,9 @@
 .portrait {
-    width: auto;
+    width: calc(100% - 100px);
+    height: 100%;
+    object-fit: cover;
     aspect-ratio: 64 / 27;
     margin: 25px 50px;
-    background-image: url('../../../assets/jpg/person.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     border-radius: 10px;
 }
 
@@ -55,10 +53,8 @@
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    background-image: url('../../../assets/jpg/person.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-right: 25px;
+    object-fit: cover;
 }
 
 .events {
@@ -105,7 +101,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.event__badge-politics {
+    background-color: cadetblue;
+}
+
+.event__badge-media {
     background-color: coral;
+}
+
+.event__badge-business {
+    background-color: darkorange;
+}
+
+.event__badge-work {
+    background-color:forestgreen;
+    color: white;
+}
+
+.event__badge-science {
+    background-color: cornflowerblue;
+}
+
+.event__badge-society {
+    background-color: darkkhaki;
+}
+
+.event__badge-education {
+    background-color: darkmagenta;
+    color: white;
 }
 
 .event__link {
